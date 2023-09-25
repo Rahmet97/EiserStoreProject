@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 
-from .models import CategoryProduct
+from .models import Product
 
 
 class CategoryView(View):
@@ -17,5 +17,5 @@ class SingleProductView(View):
 
     def post(self, request):
         id = request.GET.get('id')
-        products = CategoryProduct.objects.get(id=id)
-        return render(request, 'single-product.html', {'products': products})
+        product = Product.objects.get(id=id)
+        return render(request, 'single-product.html', {'product': product})
