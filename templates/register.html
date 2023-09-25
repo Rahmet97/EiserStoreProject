@@ -1,0 +1,25 @@
+ {% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container"
+    <form method="post">
+        <label for="first_name">First name</label>
+        <input type="text" name="first_name" id="first_name"/><br>
+        <label for="last_name">Last name</label>
+        <input type="text" name="last_name" id="last_name"/><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"/><br>
+        <label for="username">Username</label>
+        <input type="text" name="usernaem" id="username"/><br>
+        <label for="password1">Password</label>
+        <input type="password" name="password1" id="password1"/><br>
+        <label for="password2">Password confirm</label>
+        <input type="password" name="password2" id="password2"/><br>
+        <button type="submit">OK</button>
+        <br><br>
+        <p>Do you have an account? <a href="login">Login</a></p>
+    </form>
+{% endblock %}
