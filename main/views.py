@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 from django.views import View
 
@@ -15,7 +16,8 @@ def home(request):
 
 class SingleProductView(View):
 
-    def post(self, request):
-        id = request.GET.get('id')
+    def post(self, request, id):
+        # id = request.GET.get('id')
         product = Product.objects.get(id=id)
         return render(request, 'single-product.html', {'product': product})
+
