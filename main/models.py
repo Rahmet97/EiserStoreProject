@@ -15,3 +15,9 @@ class Category(models.Model):
 
 class ShopCategory(models.Model):
     name = models.CharField(max_length=150)
+class User(models.Model):
+    sdm = models.CharField(max_length=255),
+    dms = models.CharField(max_length=255),
+
+
+# Create your models here.
