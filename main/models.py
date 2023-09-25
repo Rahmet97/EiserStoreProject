@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+
+class CategoryProduct(models.Model):
+    name = models.CharField(max_length=150)
+    images = models.ImageField(upload_to=True)
+    price = models.IntegerField()
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=150)
