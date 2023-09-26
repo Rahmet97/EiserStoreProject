@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from .models import Subscriber
+from django.views import View
+from .models import Comment
+
 def home(requset):
     return render(requset, 'index.html')
 def blog(request):
     return render(request, 'blog.html')
 def single_blog(request):
     return render(request, 'single-blog.html')
-
 
 def subscribe_form(request):
     if request.method == 'POST':
@@ -15,14 +17,6 @@ def subscribe_form(request):
             subscriber = Subscriber(email=email)
             subscriber.save()
     return redirect('single-blog')
-
-
-from .models import Comment
-
-
-from django.views import View
-from django.shortcuts import render, redirect
-from .models import Comment  # Импортируйте вашу модель Comment
 
 class AddCommentView(View):
     def post(self, request, *args, **kwargs):
@@ -34,7 +28,7 @@ class AddCommentView(View):
         comment = Comment(name=name, email=email, website=website, text=comment_text)
         comment.save()
 
-        return redirect('home')  # Предположим, что 'home' - это имя URL, на которое вы хотите перейти после сохранения комментария.
+        return redirect('home')
 
 
 
