@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,11 +7,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png" />
+  <link rel="icon" href="{% static 'img/fevicon.png' %}" type="image/png" />
   <title>Eiser ecommerce</title>
-    {% block css %}
 
-    {% endblock %}
+    {% block css %}{% endblock css %}
 </head>
 
 <body>
@@ -55,7 +53,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html">
+          <a class="navbar-brand logo_h" href="/">
             <img src="{% static 'img/logo.png'%}" alt="" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -70,23 +68,23 @@
               <div class="col-lg-7 pr-0">
                 <ul class="nav navbar-nav center_nav pull-right">
                   <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                   </li>
                   <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">Shop</a>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a class="nav-link" href="category.html">Shop Category</a>
+                        <a class="nav-link" href="category">Shop Category</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="single-product.html">Product Details</a>
+                        <a class="nav-link" href="single-product">Product Details</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="checkout.html">Product Checkout</a>
+                        <a class="nav-link" href="checkout">Product Checkout</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Shopping Cart</a>
+                        <a class="nav-link" href="cart">Shopping Cart</a>
                       </li>
                     </ul>
                   </li>
@@ -95,10 +93,10 @@
                       aria-expanded="false">Blog</a>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="/blog">Blog</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="single-blog.html">Blog Details</a>
+                        <a class="nav-link" href="/single-blog">Blog Details</a>
                       </li>
                     </ul>
                   </li>
@@ -107,15 +105,15 @@
                       aria-expanded="false">Pages</a>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a class="nav-link" href="tracking.html">Tracking</a>
+                        <a class="nav-link" href="tracking">Tracking</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="elements.html">Elements</a>
+                        <a class="nav-link" href="elements">Elements</a>
                       </li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="contact">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -154,10 +152,7 @@
     </div>
   </header>
 
-{% block content %}
-
-{% endblock %}
-
+{% block content %}{% endblock %}
 
   <!--================ start footer Area  =================-->
   <footer class="footer-area section_gap">
@@ -234,11 +229,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  {% block js %}
-
-{% endblock %}
+{% block js %}{% endblock %}
 </body>
-
 </html>
 
 
