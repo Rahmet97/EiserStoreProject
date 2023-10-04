@@ -47,4 +47,4 @@ class AddCommentView(View):
         comment.save()
 
         return redirect(
-            'home')
+            '/')
